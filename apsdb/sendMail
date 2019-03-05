@@ -1,0 +1,8 @@
+var sendEmailInput = {
+	"apsma.to" : ["julien@scriptr.io", "julien.mrad@elementn.com"],
+	"apsma.subject" : "Testing SendMail by callApi",
+	"apsma.htmlBody" : "<b>Testing</b> apsdb.callApi('SendEmail')",
+	"apsma.senderName" : "Jules"
+};
+
+return apsdb.callApi("SendEmail", sendEmailInput, null);

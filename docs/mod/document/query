@@ -1,0 +1,11 @@
+// Import the document module
+var documents = require("document");
+
+// Look for the document where the name field is equal to USA
+var doc = documents.query({"query":'name="USA"', "fields":"*", "sort":"name<string:ASC>, totalLandArea<numeric:DESC>"});
+
+var log = require("log");
+log.setLevel("DEBUG");
+log.debug(JSON.stringify(doc.result.documents[0]));
+
+return doc;
